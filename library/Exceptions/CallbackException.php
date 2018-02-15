@@ -17,10 +17,10 @@ class CallbackException extends NestedValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be valid',
+            self::STANDARD => 'Поле {{name}} должно быть валидным',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be valid',
+            self::STANDARD => 'Поле {{name}} не должно быть валидным',
         ],
     ];
 }

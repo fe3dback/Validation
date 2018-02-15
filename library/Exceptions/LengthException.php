@@ -22,16 +22,14 @@ class LengthException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::BOTH => '{{name}} must have a length between {{minValue}} and {{maxValue}}',
-            self::LOWER => '{{name}} must have a length greater than {{minValue}}',
-            self::GREATER => '{{name}} must have a length lower than {{maxValue}}',
-            self::EXACT => '{{name}} must have a length of {{maxValue}}',
+            self::BOTH => 'Поле {{name}} должно иметь длину между {{minValue}} и {{maxValue}}',
+            self::LOWER => 'Поле {{name}} должно иметь длину больше {{minValue}}',
+            self::GREATER => 'Поле {{name}} должно иметь длину меньше {{maxValue}}',
         ],
         self::MODE_NEGATIVE => [
-            self::BOTH => '{{name}} must not have a length between {{minValue}} and {{maxValue}}',
-            self::LOWER => '{{name}} must not have a length greater than {{minValue}}',
-            self::GREATER => '{{name}} must not have a length lower than {{maxValue}}',
-            self::EXACT => '{{name}} must not have a length of {{maxValue}}',
+            self::BOTH => 'Поле {{name}} не должно иметь длину между {{minValue}} и {{maxValue}}',
+            self::LOWER => 'Поле {{name}} не должно иметь длину больше {{minValue}}',
+            self::GREATER => 'Поле {{name}} не должно иметь длину меньше {{maxValue}}',
         ],
     ];
 

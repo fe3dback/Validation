@@ -44,7 +44,7 @@ class VideoUrl extends AbstractRule
     {
         $serviceKey = mb_strtolower((string) $service);
         if (null !== $service && !isset($this->services[$serviceKey])) {
-            throw new ComponentException(sprintf('"%s" is not a recognized video service.', $service));
+            throw new ComponentException(sprintf('"%s" не является узнаваемым сервисом видео.', $service));
         }
 
         $this->service = $service;

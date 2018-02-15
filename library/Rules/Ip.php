@@ -48,15 +48,15 @@ class Ip extends AbstractRule
         } elseif (false !== mb_strpos($input, '/')) {
             $this->parseRangeUsingCidr($input, $range);
         } else {
-            throw new ComponentException('Invalid network range');
+            throw new ComponentException('Некорректный диапазон сети');
         }
 
         if (!$this->verifyAddress($range['min'])) {
-            throw new ComponentException('Invalid network range');
+            throw new ComponentException('Некорректный диапазон сети');
         }
 
         if (isset($range['max']) && !$this->verifyAddress($range['max'])) {
-            throw new ComponentException('Invalid network range');
+            throw new ComponentException('Некорректный диапазон сети');
         }
 
         return $range;
@@ -92,7 +92,7 @@ class Ip extends AbstractRule
         }
 
         if ($isAddressMask || $input[1] < 8 || $input[1] > 30) {
-            throw new ComponentException('Invalid network mask');
+            throw new ComponentException('Некорректная маска сети');
         }
 
         $range['mask'] = sprintf('%032b', ip2long(long2ip(~(2 ** (32 - $input[1]) - 1))));

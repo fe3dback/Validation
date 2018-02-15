@@ -23,10 +23,10 @@ final class TimeException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid time in the format {{sample}}',
+            self::STANDARD => 'Поле {{name}} должно быть корректным временем в формате {{sample}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid time in the format {{sample}}',
+            self::STANDARD => 'Поле {{name}} не должно быть корректным временем в формате {{sample}}',
         ],
     ];
 

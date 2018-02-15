@@ -28,7 +28,7 @@ class Base extends AbstractRule
 
         $max = mb_strlen($this->chars);
         if (!is_numeric($base) || $base > $max) {
-            throw new BaseException(sprintf('a base between 1 and %s is required', $max));
+            throw new BaseException(sprintf('необходима база между 1 and %s', $max));
         }
         $this->base = $base;
     }

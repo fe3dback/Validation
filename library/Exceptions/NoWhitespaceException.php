@@ -17,10 +17,10 @@ class NoWhitespaceException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must not contain whitespace',
+            self::STANDARD => 'Поле {{name}} не должно содержать пробелы и неотображаемые символы',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not not contain whitespace',
+            self::STANDARD => 'Поле {{name}} должно содержать пробелы и/или неотображаемые символы',
         ],
     ];
 }

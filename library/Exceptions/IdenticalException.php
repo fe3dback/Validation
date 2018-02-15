@@ -23,10 +23,10 @@ final class IdenticalException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be identical as {{compareTo}}',
+            self::STANDARD => 'Поле {{name}} должно быть идентично {{compareTo}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be identical as {{compareTo}}',
+            self::STANDARD => 'Поле {{name}} не должно быть идентично {{compareTo}}',
         ],
     ];
 }

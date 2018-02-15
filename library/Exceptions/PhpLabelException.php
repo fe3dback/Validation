@@ -17,10 +17,10 @@ class PhpLabelException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid PHP label',
+            self::STANDARD => 'Поле {{name}} должно быть валидным PHP-ярлыком (label)',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid PHP label',
+            self::STANDARD => 'Поле {{name}} не должно быть валидным PHP-ярлыком (label)',
         ],
     ];
 }

@@ -17,12 +17,12 @@ class VowelException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only vowels',
-            self::EXTRA => '{{name}} must contain only vowels and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только гласные',
+            self::EXTRA => 'Поле {{name}} должно содержать только гласные и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain vowels',
-            self::EXTRA => '{{name}} must not contain vowels or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать гласные',
+            self::EXTRA => 'Поле {{name}} не должно содержать гласные или "{{additionalChars}}"',
         ],
     ];
 }

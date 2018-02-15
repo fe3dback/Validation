@@ -43,7 +43,7 @@ final class Time extends AbstractRule
     public function __construct(string $format = 'H:i:s')
     {
         if (!preg_match('/^[gGhHisuvaA\W]+$/', $format)) {
-            throw new ComponentException(sprintf('"%s" is not a valid date format', $format));
+            throw new ComponentException(sprintf('"%s" не является корректным форматом даты', $format));
         }
 
         $this->format = $format;

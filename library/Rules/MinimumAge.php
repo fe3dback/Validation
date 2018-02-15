@@ -25,7 +25,7 @@ class MinimumAge extends AbstractRule
     public function __construct($age, $format = null)
     {
         if (!filter_var($age, FILTER_VALIDATE_INT)) {
-            throw new ComponentException('The age must be a integer value.');
+            throw new ComponentException('Возраст должен быть целым числом.');
         }
 
         $this->age = $age;

@@ -525,7 +525,7 @@ class LanguageCode extends AbstractRule
         $index = array_search($set, self::getAvailableSets(), true);
 
         if (false === $index) {
-            throw new ComponentException(sprintf('"%s" is not a valid language set for ISO 639', $set));
+            throw new ComponentException(sprintf('"%s" некорректный перечень для ISO 639', $set));
         }
 
         $this->set = $set;

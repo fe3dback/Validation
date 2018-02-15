@@ -44,7 +44,7 @@ final class Date extends AbstractRule
     public function __construct(string $format = 'Y-m-d')
     {
         if (!preg_match('/^[djSFmMnYy\W]+$/', $format)) {
-            throw new ComponentException(sprintf('"%s" is not a valid date format', $format));
+            throw new ComponentException(sprintf('"%s" не является корректным форматом даты', $format));
         }
 
         $this->format = $format;

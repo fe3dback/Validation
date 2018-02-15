@@ -25,10 +25,10 @@ class MimetypeException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must have {{mimetype}} mimetype',
+            self::STANDARD => 'Поле {{name}} должно иметь {{mimetype}} тип MIME',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not have {{mimetype}} mimetype',
+            self::STANDARD => 'Поле {{name}} не должно иметь {{mimetype}} тип MIME',
         ],
     ];
 }

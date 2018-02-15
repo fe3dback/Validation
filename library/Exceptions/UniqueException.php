@@ -17,10 +17,10 @@ class UniqueException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must not contain duplicates',
+            self::STANDARD => 'Поле {{name}} не должно содержать повторений',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must contain duplicates',
+            self::STANDARD => 'Поле {{name}} должно содержать повторения',
         ],
     ];
 }

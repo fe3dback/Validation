@@ -19,12 +19,12 @@ class CreditCardException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid Credit Card number',
-            self::BRANDED => '{{name}} must be a valid {{brand}} Credit Card number',
+            self::STANDARD => 'Поле {{name}} должно быть валидным номером кредитной карты',
+            self::BRANDED => 'Поле {{name}} должно быть валидным номером кредитной карты {{brand}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid Credit Card number',
-            self::BRANDED => '{{name}} must not be a valid {{brand}} Credit Card number',
+            self::STANDARD => 'Поле {{name}} не должно быть валидным номером кредитной карты',
+            self::BRANDED => 'Поле {{name}} не должно быть валидным номером кредитной карты {{brand}}',
         ],
     ];
 

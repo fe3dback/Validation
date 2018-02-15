@@ -21,14 +21,14 @@ class BetweenException extends NestedValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::BOTH => '{{name}} must be between {{minValue}} and {{maxValue}}',
-            self::LOWER => '{{name}}  must be greater than {{minValue}}',
-            self::GREATER => '{{name}} must be lower than {{maxValue}}',
+            self::BOTH => 'Поле {{name}} должно быть между {{minValue}} и {{maxValue}}',
+            self::LOWER => 'Поле {{name}} должно быть больше {{minValue}}',
+            self::GREATER => 'Поле {{name}} должно быть меньше {{maxValue}}',
         ],
         self::MODE_NEGATIVE => [
-            self::BOTH => '{{name}} must not be between {{minValue}} and {{maxValue}}',
-            self::LOWER => '{{name}}  must not be greater than {{minValue}}',
-            self::GREATER => '{{name}} must not be lower than {{maxValue}}',
+            self::BOTH => 'Поле {{name}} не должно быть между {{minValue}} и {{maxValue}}',
+            self::LOWER => 'Поле {{name}} не должно быть больше {{minValue}}',
+            self::GREATER => 'Поле {{name}} не должно быть меньше {{maxValue}}',
         ],
     ];
 

@@ -19,12 +19,12 @@ class KeyValueException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'Key {{name}} must be present',
-            self::COMPONENT => '{{baseKey}} must be valid to validate {{comparedKey}}',
+            self::STANDARD => 'Ключ {{name}} должен присутствовать',
+            self::COMPONENT => 'Ключ {{baseKey}} должен быть валидным для сопоставления и валидации {{comparedKey}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'Key {{name}} must not be present',
-            self::COMPONENT => '{{baseKey}} must not be valid to validate {{comparedKey}}',
+            self::STANDARD => 'Ключ {{name}} не должен присутствовать',
+            self::COMPONENT => 'Ключ {{baseKey}} не должен быть валидным для сопоставления и валидации {{comparedKey}}',
         ],
     ];
 

@@ -20,12 +20,12 @@ class OptionalException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'The value must be optional',
-            self::NAMED => '{{name}} must be optional',
+            self::STANDARD => 'Значение должно быть опционально',
+            self::NAMED => 'Поле {{name}} должно быть опционально',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'The value must not be optional',
-            self::NAMED => '{{name}} must not be optional',
+            self::STANDARD => 'Значение не должно быть опционально',
+            self::NAMED => 'Поле {{name}} не должно быть опционально',
         ],
     ];
 

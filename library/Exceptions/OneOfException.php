@@ -20,10 +20,10 @@ class OneOfException extends NestedValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'Only one of these rules must pass for {{name}}',
+            self::STANDARD => 'Как минимум одно из этих правил должно выполняться для поля {{name}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'Only one of these rules must not pass for {{name}}',
+            self::STANDARD => 'Как минимум одно из этих правил не должно выполняться для поля {{name}}',
         ],
     ];
 }

@@ -17,10 +17,10 @@ class ContainsException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain the value "{{containsValue}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать значение "{{containsValue}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain the value "{{containsValue}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать значение "{{containsValue}}"',
         ],
     ];
 }

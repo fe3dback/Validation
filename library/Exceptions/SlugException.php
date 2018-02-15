@@ -17,10 +17,10 @@ class SlugException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid slug',
+            self::STANDARD => 'Поле {{name}} должно быть валидной описательной частью url (slug)',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid slug',
+            self::STANDARD => 'Поле {{name}} не должно быть валидной описательной частью url (slug)',
         ],
     ];
 }

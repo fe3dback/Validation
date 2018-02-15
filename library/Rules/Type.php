@@ -37,7 +37,7 @@ class Type extends AbstractRule
     {
         $lowerType = mb_strtolower($type);
         if (!isset($this->availableTypes[$lowerType])) {
-            throw new ComponentException(sprintf('"%s" is not a valid type', print_r($type, true)));
+            throw new ComponentException(sprintf('"%s" не является корректным типом', print_r($type, true)));
         }
 
         $this->type = $type;

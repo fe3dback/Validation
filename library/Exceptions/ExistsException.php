@@ -17,10 +17,10 @@ class ExistsException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must exists',
+            self::STANDARD => 'Поле {{name}} должно существовать',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not exists',
+            self::STANDARD => 'Поле {{name}} не должно существовать',
         ],
     ];
 }

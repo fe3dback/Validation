@@ -17,10 +17,10 @@ class MinimumAgeException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'The age must be {{age}} years or more.',
+            self::STANDARD => 'Возраст должен быть {{age}} лет или больше.',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'The age must not be {{age}} years or more.',
+            self::STANDARD => 'Возраст не должен быть {{age}} лет или больше.',
         ],
     ];
 }

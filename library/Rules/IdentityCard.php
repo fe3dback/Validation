@@ -20,6 +20,13 @@ final class IdentityCard extends AbstractLocaleWrapper
      */
     protected function getSuffix(): string
     {
-        return 'IdentityCard';
+        $shortName = ucfirst(strtolower($countryCode)).'IdentityCard';
+        $className = __NAMESPACE__.'\\Locale\\'.$shortName;
+        if (!class_exists($className)) {
+            throw new ComponentException(sprintf('Нет поддержки для удостоверения личности "%s"', $countryCode));
+        }
+
+        $this->countryCode = $countryCode;
+        $this->validatable = new $className();
     }
 }

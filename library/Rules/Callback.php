@@ -23,7 +23,7 @@ class Callback extends AbstractRule
     public function __construct($callback)
     {
         if (!is_callable($callback)) {
-            throw new ComponentException('Invalid callback');
+            throw new ComponentException('Некорректный callback');
         }
 
         $arguments = func_get_args();

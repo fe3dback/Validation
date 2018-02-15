@@ -116,32 +116,9 @@ final class Factory
                 continue;
             }
 
-            return $this->createReflectionClass($className, Validatable::class)->newInstanceArgs($arguments);
-        }
-
-        throw new ComponentException(sprintf('"%s" is not a valid rule name', $ruleName));
-    }
-
-    /**
-     * Creates an exception.
-     *
-     *
-     * @param Validatable $validatable
-     * @param mixed $input
-     * @param array $extraParams
-     *
-     * @throws ComponentException
-     *
-     * @return ValidationException
-     */
-    public function exception(Validatable $validatable, $input, array $extraParams = []): ValidationException
-    {
-        $reflection = new ReflectionObject($validatable);
-        $ruleName = $reflection->getShortName();
-        foreach ($this->exceptionsNamespaces as $namespace) {
-            $exceptionName = sprintf('%s\\%sException', $namespace, $ruleName);
-            if (!class_exists($exceptionName)) {
-                continue;
+            $reflection = new ReflectionClass($className);
+            if (!$reflection->isSubclassOf('Respect\\Validation\\Validatable')) {
+                throw new ComponentException(sprintf('"%s" не является валидным правилом', $className));
             }
 
             $name = $validatable->getName() ?: stringify($input);
@@ -150,97 +127,6 @@ final class Factory
             return $this->createValidationException($exceptionName, $name, $params);
         }
 
-        throw new ComponentException(sprintf('Cannot find exception for "%s" rule', lcfirst($ruleName)));
-    }
-
-    /**
-     * Creates a reflection based on class name.
-     *
-     *
-     * @param string $name
-     * @param string $parentName
-     *
-     * @throws InvalidClassException
-     *
-     * @return ReflectionClass
-     */
-    private function createReflectionClass(string $name, string $parentName): ReflectionClass
-    {
-        $reflection = new ReflectionClass($name);
-        if (!$reflection->isSubclassOf($parentName)) {
-            throw new InvalidClassException(sprintf('"%s" must be an instance of "%s"', $name, $parentName));
-        }
-
-        if (!$reflection->isInstantiable()) {
-            throw new InvalidClassException(sprintf('"%s" must be instantiable', $name));
-        }
-
-        return $reflection;
-    }
-
-    /**
-     * Filters namespaces.
-     *
-     * Ensure namespaces are in the right format and contain the default namespaces.
-     *
-     * @param array $namespaces
-     * @param array $defaultNamespaces
-     *
-     * @return array
-     */
-    private function filterNamespaces(array $namespaces, array $defaultNamespaces): array
-    {
-        $filter = function (string $namespace): string {
-            return trim($namespace, '\\');
-        };
-
-        return array_unique(
-            array_merge(
-                array_map($filter, $namespaces),
-                array_map($filter, $defaultNamespaces)
-            )
-        );
-    }
-
-    /**
-     * Creates a Validation exception.
-     *
-     * @param string $exceptionName
-     * @param mixed $name
-     * @param array $params
-     *
-     * @return ValidationException
-     */
-    private function createValidationException(string $exceptionName, $name, array $params): ValidationException
-    {
-        $exception = $this->createReflectionClass($exceptionName, ValidationException::class)->newInstance();
-        $exception->configure($name, $params);
-        if (isset($params['template'])) {
-            $exception->setTemplate($params['template']);
-        }
-
-        return $exception;
-    }
-
-    /**
-     * @param Validatable $validatable
-     * @param ReflectionClass $reflection
-     *
-     * @return array
-     */
-    private function extractPropertiesValues(Validatable $validatable, ReflectionClass $reflection): array
-    {
-        $values = [];
-        foreach ($reflection->getProperties() as $property) {
-            $property->setAccessible(true);
-
-            $values[$property->getName()] = $property->getValue($validatable);
-        }
-
-        if (($parentReflection = $reflection->getParentClass())) {
-            return $values + $this->extractPropertiesValues($validatable, $parentReflection);
-        }
-
-        return $values;
+        throw new ComponentException(sprintf('"%s" не является валидным именем правила', $ruleName));
     }
 }

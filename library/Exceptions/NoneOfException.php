@@ -17,10 +17,10 @@ class NoneOfException extends NestedValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'None of these rules must pass for {{name}}',
+            self::STANDARD => 'Никакие из этих правил не должны выполняться для поля {{name}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'All of these rules must pass for {{name}}',
+            self::STANDARD => 'Все эти правила должны выполняться для поля {{name}}',
         ],
     ];
 }

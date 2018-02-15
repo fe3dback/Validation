@@ -23,10 +23,10 @@ class CallableTypeException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a callable',
+            self::STANDARD => 'Поле {{name}} должно быть функцией (callable)',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a callable',
+            self::STANDARD => 'Поле {{name}} не должно быть функцией (callable)',
         ],
     ];
 }

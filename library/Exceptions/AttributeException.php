@@ -19,12 +19,12 @@ class AttributeException extends NestedValidationException implements NonOmissib
     const INVALID = 1;
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::NOT_PRESENT => 'Attribute {{name}} must be present',
-            self::INVALID => 'Attribute {{name}} must be valid',
+            self::NOT_PRESENT => 'Свойство {{name}} должно быть указано',
+            self::INVALID => 'Свойство {{name}} должно быть корректным',
         ],
         self::MODE_NEGATIVE => [
-            self::NOT_PRESENT => 'Attribute {{name}} must not be present',
-            self::INVALID => 'Attribute {{name}} must not validate',
+            self::NOT_PRESENT => 'Свойство {{name}} не должно быть указано',
+            self::INVALID => 'Свойство {{name}} не должно быть корректным',
         ],
     ];
 

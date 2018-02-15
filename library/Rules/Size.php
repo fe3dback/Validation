@@ -75,7 +75,7 @@ class Size extends AbstractRule
         }
 
         if (!is_numeric($value)) {
-            throw new ComponentException(sprintf('"%s" is not a recognized file size.', $size));
+            throw new ComponentException(sprintf('"%s" не является узнаваемым размером файла.', $size));
         }
 
         return $value;

@@ -17,10 +17,10 @@ class Base64Exception extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be Base64-encoded',
+            self::STANDARD => 'Поле {{name}} должно быть в кодировке Base64',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be Base64-encoded',
+            self::STANDARD => 'Поле {{name}} не должно быть в кодировке Base64',
         ],
     ];
 }

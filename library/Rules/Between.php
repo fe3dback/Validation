@@ -25,7 +25,7 @@ class Between extends AllOf
         $this->minValue = $min;
         $this->maxValue = $max;
         if (!is_null($min) && !is_null($max) && $min > $max) {
-            throw new ComponentException(sprintf('%s cannot be less than  %s for validation', $min, $max));
+            throw new ComponentException(sprintf('%s не может быть меньше %s для валидации', $min, $max));
         }
 
         if (!is_null($min)) {

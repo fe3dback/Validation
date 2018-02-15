@@ -17,10 +17,10 @@ class NegativeException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be negative',
+            self::STANDARD => 'Поле {{name}} должно быть отрицательным',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be negative',
+            self::STANDARD => 'Поле {{name}} не должно быть отрицательным',
         ],
     ];
 }

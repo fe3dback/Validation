@@ -17,10 +17,10 @@ class IntValException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be an integer number',
+            self::STANDARD => 'Поле {{name}} должно быть целым числом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be an integer number',
+            self::STANDARD => 'Поле {{name}} не должно быть целым числом',
         ],
     ];
 }

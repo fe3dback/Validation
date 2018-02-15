@@ -28,6 +28,13 @@ final class SubdivisionCode extends AbstractLocaleWrapper
      */
     protected function getSuffix(): string
     {
-        return 'SubdivisionCode';
+        $shortName = ucfirst(strtolower($countryCode)).'SubdivisionCode';
+        $className = __NAMESPACE__.'\\SubdivisionCode\\'.$shortName;
+        if (!class_exists($className)) {
+            throw new ComponentException(sprintf('"%s" не является корректным кодом страны в ISO 3166-2', $countryCode));
+        }
+
+        $this->countryCode = $countryCode;
+        $this->validatable = new $className();
     }
 }

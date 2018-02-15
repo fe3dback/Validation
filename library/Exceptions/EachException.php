@@ -17,10 +17,10 @@ class EachException extends NestedValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'Each item in {{name}} must be valid',
+            self::STANDARD => 'Каждый элемент в поле {{name}} должен быть валидным',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'Each item in {{name}} must not validate',
+            self::STANDARD => 'Каждый элемент в поле {{name}} должен быть невалидным',
         ],
     ];
 }

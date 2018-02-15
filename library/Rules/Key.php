@@ -21,7 +21,7 @@ class Key extends AbstractRelated
     public function __construct($reference, Validatable $referenceValidator = null, $mandatory = true)
     {
         if (!is_scalar($reference) || '' === $reference) {
-            throw new ComponentException('Invalid array key name');
+            throw new ComponentException('Некорректный ключ');
         }
         parent::__construct($reference, $referenceValidator, $mandatory);
     }

@@ -25,10 +25,10 @@ final class EqualsException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must equal {{compareTo}}',
+            self::STANDARD => 'Поле {{name}} должно быть эквивалентно полю {{compareTo}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not equal {{compareTo}}',
+            self::STANDARD => 'Поле {{name}} не должно быть эквивалентно полю {{compareTo}}',
         ],
     ];
 }

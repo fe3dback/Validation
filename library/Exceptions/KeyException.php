@@ -17,12 +17,12 @@ class KeyException extends AttributeException implements NonOmissibleExceptionIn
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::NOT_PRESENT => 'Key {{name}} must be present',
-            self::INVALID => 'Key {{name}} must be valid',
+            self::NOT_PRESENT => 'Ключ {{name}} должен присутствовать',
+            self::INVALID => 'Ключ {{name}} должен быть валидным',
         ],
         self::MODE_NEGATIVE => [
-            self::NOT_PRESENT => 'Key {{name}} must not be present',
-            self::INVALID => 'Key {{name}} must not be valid',
+            self::NOT_PRESENT => 'Ключ {{name}} не должен присутствовать',
+            self::INVALID => 'Ключ {{name}} не должен быть валидным',
         ],
     ];
 }

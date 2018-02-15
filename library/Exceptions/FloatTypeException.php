@@ -17,10 +17,10 @@ class FloatTypeException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be of the type float',
+            self::STANDARD => 'Поле {{name}} должно принадлежать к типу дробных чисел (float)',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be of the type float',
+            self::STANDARD => 'Поле {{name}} не должно принадлежать к типу дробных чисел (float)',
         ],
     ];
 }

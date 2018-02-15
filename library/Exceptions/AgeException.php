@@ -21,14 +21,14 @@ class AgeException extends NestedValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::BOTH => '{{name}} must be between {{minAge}} and {{maxAge}} years ago',
-            self::LOWER => '{{name}} must be lower than {{minAge}} years ago',
-            self::GREATER => '{{name}} must be greater than {{maxAge}} years ago',
+            self::BOTH => 'Поле {{name}} должно быть между {{minAge}} и {{maxAge}} лет назад',
+            self::LOWER => 'Поле {{name}} должно быть меньше {{minAge}} лет назад',
+            self::GREATER => 'Поле {{name}} должно быть больше {{maxAge}} лет назад',
         ],
         self::MODE_NEGATIVE => [
-            self::BOTH => '{{name}} must not be between {{minAge}} and {{maxAge}} years ago',
-            self::LOWER => '{{name}} must not be lower than {{minAge}} years ago',
-            self::GREATER => '{{name}} must not be greater than {{maxAge}} years ago',
+            self::BOTH => 'Поле {{name}} не должно быть между {{minAge}} и {{maxAge}} лет назад',
+            self::LOWER => 'Поле {{name}} не должно быть меньше {{minAge}} лет назад',
+            self::GREATER => 'Поле {{name}} не должно быть больше {{maxAge}} лет назад',
         ],
     ];
 

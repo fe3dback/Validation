@@ -25,10 +25,10 @@ class ValidationException extends InvalidArgumentException implements ExceptionI
     const STANDARD = 0;
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'Data validation failed for %s',
+            self::STANDARD => 'Валидация данных не удалась для %s',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'Data validation failed for %s',
+            self::STANDARD => 'Валидация данных не удалась для %s',
         ],
     ];
 
@@ -49,7 +49,7 @@ class ValidationException extends InvalidArgumentException implements ExceptionI
                 }
 
                 $value = $vars[$match[1]];
-                if ('name' == $match[1] && is_string($value)) {
+                if ('name' === $match[1] && is_string($value)) {
                     return $value;
                 }
 
@@ -220,7 +220,7 @@ class ValidationException extends InvalidArgumentException implements ExceptionI
 
     public function guessId()
     {
-        if (!empty($this->id) && 'validation' != $this->id) {
+        if (!empty($this->id) && $this->id !== 'validation') {
             return $this->id;
         }
 

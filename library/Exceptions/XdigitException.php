@@ -17,12 +17,12 @@ class XdigitException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} contain only hexadecimal digits',
-            self::EXTRA => '{{name}} contain only hexadecimal digits and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только шестнадцатеричные числа',
+            self::EXTRA => 'Поле {{name}} должно содержать только шестнадцатеричные числа и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain hexadecimal digits',
-            self::EXTRA => '{{name}} must not contain hexadecimal digits or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать шестнадцатеричные числа',
+            self::EXTRA => 'Поле {{name}} не должно содержать шестнадцатеричные числа или "{{additionalChars}}"',
         ],
     ];
 }

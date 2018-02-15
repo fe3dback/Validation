@@ -19,12 +19,12 @@ class VideoUrlException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid video URL',
-            self::SERVICE => '{{name}} must be a valid {{service}} video URL',
+            self::STANDARD => 'Поле {{name}} должно быть валидной видео-гиперссылкой (video URL)',
+            self::SERVICE => 'Поле {{name}} должно быть валидной {{service}} видео-гиперссылкой (video URL)',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid video URL',
-            self::SERVICE => '{{name}} must not be a valid {{service}} video URL',
+            self::STANDARD => 'Поле {{name}} не должно быть валидной видео-гиперссылкой (video URL)',
+            self::SERVICE => 'Поле {{name}} не должно быть валидной {{service}} видео-гиперссылкой (video URL)',
         ],
     ];
 

@@ -48,7 +48,7 @@ class CreditCard extends AbstractRule
     {
         if (null !== $brand && !isset($this->brands[$brand])) {
             $brands = implode(', ', array_keys($this->brands));
-            $message = sprintf('"%s" is not a valid credit card brand (Available: %s).', $brand, $brands);
+            $message = sprintf('"%s" некорректный бренд кредитной карты (Доступно: %s).', $brand, $brands);
             throw new ComponentException($message);
         }
 

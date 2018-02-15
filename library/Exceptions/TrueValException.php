@@ -17,10 +17,10 @@ class TrueValException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} is not considered as "True"',
+            self::STANDARD => 'Поле {{name}} не считается верным ("True")',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} is considered as "True"',
+            self::STANDARD => 'Поле {{name}} считается верным ("True")',
         ],
     ];
 }

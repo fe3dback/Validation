@@ -17,10 +17,10 @@ class MultipleException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be multiple of {{multipleOf}}',
+            self::STANDARD => 'Поле {{name}} должно быть множителем или кратно {{multipleOf}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be multiple of {{multipleOf}}',
+            self::STANDARD => 'Поле {{name}} не должно быть множителем или кратно {{multipleOf}}',
         ],
     ];
 }

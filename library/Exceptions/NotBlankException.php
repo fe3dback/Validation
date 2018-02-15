@@ -20,12 +20,12 @@ class NotBlankException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'The value must not be blank',
-            self::NAMED => '{{name}} must not be blank',
+            self::STANDARD => 'Значение не должно быть пустым',
+            self::NAMED => 'Поле {{name}} не должно быть пустым',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'The value must be blank',
-            self::NAMED => '{{name}} must be blank',
+            self::STANDARD => 'Значение должно быть пустым',
+            self::NAMED => 'Поле {{name}} должно быть пустым',
         ],
     ];
 

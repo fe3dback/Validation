@@ -17,10 +17,10 @@ class FibonacciException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid Fibonacci number',
+            self::STANDARD => 'Поле {{name}} должно быть валидным числом Фибоначчи',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid Fibonacci number',
+            self::STANDARD => 'Поле {{name}} не должно быть валидным числом Фибоначчи',
         ],
     ];
 }

@@ -17,12 +17,12 @@ class KeyNestedException extends AttributeException implements NonOmissibleExcep
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::NOT_PRESENT => 'No items were found for key chain {{name}}',
-            self::INVALID => 'Key chain {{name}} is not valid',
+            self::NOT_PRESENT => 'Не было найдено ни одного элемента для цепочки ключей {{name}}',
+            self::INVALID => 'Цепочка ключей {{name}} не является валидной',
         ],
         self::MODE_NEGATIVE => [
-            self::NOT_PRESENT => 'Items for key chain {{name}} must not be present',
-            self::INVALID => 'Key chain {{name}} must not be valid',
+            self::NOT_PRESENT => 'Элементы для цепочки ключей {{name}} не должны присутствовать',
+            self::INVALID => 'Цепочка ключей {{name}} не должна быть валидной',
         ],
     ];
 }

@@ -17,12 +17,12 @@ class AlnumException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only letters (a-z) and digits (0-9)',
-            self::EXTRA => '{{name}} must contain only letters (a-z), digits (0-9) and {{additionalChars}}',
+            self::STANDARD => 'Поле {{name}} должно содержать только буквы (a-z) и цифры (0-9)',
+            self::EXTRA => 'Поле {{name}} должно содержать только буквы (a-z), цифры (0-9) и {{additionalChars}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain letters (a-z) or digits (0-9)',
-            self::EXTRA => '{{name}} must not contain letters (a-z), digits (0-9) or {{additionalChars}}',
+            self::STANDARD => 'Поле {{name}} не должно содержать буквы (a-z) и цифры (0-9)',
+            self::EXTRA => 'Поле {{name}} не должно содержать буквы (a-z), цифры (0-9) и {{additionalChars}}',
         ],
     ];
 }

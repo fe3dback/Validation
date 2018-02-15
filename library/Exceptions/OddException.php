@@ -17,10 +17,10 @@ class OddException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be an odd number',
+            self::STANDARD => 'Поле {{name}} должно быть нечётным числом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be an odd number',
+            self::STANDARD => 'Поле {{name}} не должно быть нечётным числом',
         ],
     ];
 }

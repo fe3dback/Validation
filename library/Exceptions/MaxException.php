@@ -19,12 +19,12 @@ class MaxException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be less than {{interval}}',
-            self::INCLUSIVE => '{{name}} must be less than or equal to {{interval}}',
+            self::STANDARD => 'Поле {{name}} должно быть меньше {{interval}}',
+            self::INCLUSIVE => 'Поле {{name}} должно быть меньше либо равно {{interval}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be less than {{interval}}',
-            self::INCLUSIVE => '{{name}} must not be less than or equal to {{interval}}',
+            self::STANDARD => 'Поле {{name}} не должно быть меньше {{interval}}',
+            self::INCLUSIVE => 'Поле {{name}} не должно быть меньше либо равно {{interval}}',
         ],
     ];
 

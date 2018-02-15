@@ -17,10 +17,10 @@ class ReadableException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be readable',
+            self::STANDARD => 'Поле {{name}} должно быть читаемым',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be readable',
+            self::STANDARD => 'Поле {{name}} не должно быть читаемым',
         ],
     ];
 }

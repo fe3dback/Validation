@@ -29,19 +29,19 @@ class Length extends AbstractRule
         $paramValidator = new AnyOf(new NumericVal(), new NullType());
         if (!$paramValidator->validate($min)) {
             throw new ComponentException(
-                sprintf('%s is not a valid numeric length', $min)
+                sprintf('%s некорректная числовая длина', $min)
             );
         }
 
         if (!$paramValidator->validate($max)) {
             throw new ComponentException(
-                sprintf('%s is not a valid numeric length', $max)
+                sprintf('%s некорректная числовая длина', $max)
             );
         }
 
         if (!is_null($min) && !is_null($max) && $min > $max) {
             throw new ComponentException(
-                sprintf('%s cannot be less than %s for validation', $min, $max)
+                sprintf('%s не может быть меньше %s для валидации', $min, $max)
             );
         }
     }

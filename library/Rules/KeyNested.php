@@ -37,7 +37,7 @@ class KeyNested extends AbstractRelated
     private function getValueFromArray($array, $key)
     {
         if (!array_key_exists($key, $array)) {
-            $message = sprintf('Cannot select the key %s from the given array', $this->reference);
+            $message = sprintf('Нельзя выбрать ключ %s из данного массива', $this->reference);
             throw new ComponentException($message);
         }
 
@@ -47,7 +47,7 @@ class KeyNested extends AbstractRelated
     private function getValueFromObject($object, $property)
     {
         if (empty($property) || !property_exists($object, $property)) {
-            $message = sprintf('Cannot select the property %s from the given object', $this->reference);
+            $message = sprintf('Нельзя выбрать свойство %s из данного объекта', $this->reference);
             throw new ComponentException($message);
         }
 
@@ -64,14 +64,14 @@ class KeyNested extends AbstractRelated
             return $this->getValueFromObject($value, $key);
         }
 
-        $message = sprintf('Cannot select the property %s from the given data', $this->reference);
+        $message = sprintf('Нельзя выбрать свойство %s из текущих данных', $this->reference);
         throw new ComponentException($message);
     }
 
     public function getReferenceValue($input)
     {
         if (is_scalar($input)) {
-            $message = sprintf('Cannot select the %s in the given data', $this->reference);
+            $message = sprintf('Нельзя выбрать %s из текущих данных', $this->reference);
             throw new ComponentException($message);
         }
 

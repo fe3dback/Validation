@@ -17,12 +17,12 @@ class ConsonantException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only consonants',
-            self::EXTRA => '{{name}} must contain only consonants and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только согласные',
+            self::EXTRA => 'Поле {{name}} должно содержать только согласные и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain consonants',
-            self::EXTRA => '{{name}} must not contain consonants or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать согласные',
+            self::EXTRA => 'Поле {{name}} не должно содержать согласные или "{{additionalChars}}"',
         ],
     ];
 }
