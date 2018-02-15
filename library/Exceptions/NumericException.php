@@ -15,10 +15,10 @@ class NumericException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be numeric',
+            self::STANDARD => 'Поле {{name}} должно быть выражено числом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be numeric',
+            self::STANDARD => 'Поле {{name}} не должно быть выражено числом',
         ],
     ];
 }

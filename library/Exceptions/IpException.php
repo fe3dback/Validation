@@ -18,12 +18,12 @@ class IpException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be an IP address',
-            self::NETWORK_RANGE => '{{name}} must be an IP address in the {{range}} range',
+            self::STANDARD => 'Поле {{name}} должно быть IP-адресом',
+            self::NETWORK_RANGE => 'Поле {{name}} должно быть IP-адресом в {{range}} диапазоне',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be an IP address',
-            self::NETWORK_RANGE => '{{name}} must not be an IP address in the {{range}} range',
+            self::STANDARD => 'Поле {{name}} не должно быть IP-адресом',
+            self::NETWORK_RANGE => 'Поле {{name}} не должно быть IP-адресом в {{range}} диапазоне',
         ],
     ];
 

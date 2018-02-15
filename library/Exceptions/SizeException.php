@@ -23,14 +23,14 @@ class SizeException extends BetweenException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::BOTH => '{{name}} must be between {{minSize}} and {{maxSize}}',
-            self::LOWER => '{{name}} must be greater than {{minSize}}',
-            self::GREATER => '{{name}} must be lower than {{maxSize}}',
+            self::BOTH => 'Поле {{name}} должно быть между {{minSize}} и {{maxSize}}',
+            self::LOWER => 'Поле {{name}} должно быть больше {{minSize}}',
+            self::GREATER => 'Поле {{name}} должно быть меньше {{maxSize}}',
         ],
         self::MODE_NEGATIVE => [
-            self::BOTH => '{{name}} must not be between {{minSize}} and {{maxSize}}',
-            self::LOWER => '{{name}} must not be greater than {{minSize}}',
-            self::GREATER => '{{name}} must not be lower than {{maxSize}}',
+            self::BOTH => 'Поле {{name}} не должно быть между {{minSize}} и {{maxSize}}',
+            self::LOWER => 'Поле {{name}} не должно быть больше {{minSize}}',
+            self::GREATER => 'Поле {{name}} не должно быть меньше {{maxSize}}',
         ],
     ];
 }

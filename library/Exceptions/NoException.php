@@ -15,10 +15,10 @@ class NoException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} is not considered as "No"',
+            self::STANDARD => 'Поле {{name}} не считается "Нет" ("No")',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} is considered as "No"',
+            self::STANDARD => 'Поле {{name}} считается "Нет" ("No")',
         ],
     ];
 }

@@ -17,12 +17,12 @@ class NotEmptyException extends ValidationException
     const NAMED = 1;
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => 'The value must not be empty',
-            self::NAMED => '{{name}} must not be empty',
+            self::STANDARD => 'Значение не должно быть пустым',
+            self::NAMED => 'Поле {{name}} не должно быть пустым',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => 'The value must be empty',
-            self::NAMED => '{{name}} must be empty',
+            self::STANDARD => 'Значение должно быть пустым',
+            self::NAMED => 'Поле {{name}} должно быть пустым',
         ],
     ];
 

@@ -15,10 +15,10 @@ class PerfectSquareException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid perfect square',
+            self::STANDARD => 'Поле {{name}} должно быть валидным идеальным квадратом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid perfect square',
+            self::STANDARD => 'Поле {{name}} не должно быть валидным идеальным квадратом',
         ],
     ];
 }

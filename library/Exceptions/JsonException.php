@@ -15,10 +15,10 @@ class JsonException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a valid JSON string',
+            self::STANDARD => 'Поле {{name}} должно быть валидной JSON-строкой',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a valid JSON string',
+            self::STANDARD => 'Поле {{name}} не должно быть валидной JSON-строкой',
         ],
     ];
 }

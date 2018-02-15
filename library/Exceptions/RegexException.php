@@ -15,10 +15,10 @@ class RegexException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must validate against {{regex}}',
+            self::STANDARD => 'Поле {{name}} должно соответствовать регулярному выражению {{regex}}',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not validate against {{regex}}',
+            self::STANDARD => 'Поле {{name}} не должно соответствовать регулярному выражению {{regex}}',
         ],
     ];
 }

@@ -21,10 +21,10 @@ class ScalarValException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a scalar value',
+            self::STANDARD => 'Поле {{name}} должно иметь скалярное значение',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a scalar value',
+            self::STANDARD => 'Поле {{name}} не должно иметь скалярное значение',
         ],
     ];
 }

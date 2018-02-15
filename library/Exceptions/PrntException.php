@@ -15,12 +15,12 @@ class PrntException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only printable characters',
-            self::EXTRA => '{{name}} must contain only printable characters and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только печатные символы',
+            self::EXTRA => 'Поле {{name}} должно содержать только печатные символы и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain printable characters',
-            self::EXTRA => '{{name}} must not contain printable characters or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать печатные символы',
+            self::EXTRA => 'Поле {{name}} не должно содержать печатные символы или "{{additionalChars}}"',
         ],
     ];
 }
