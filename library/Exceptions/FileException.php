@@ -15,10 +15,10 @@ class FileException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a file',
+            self::STANDARD => 'Поле {{name}} должно быть файлом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a file',
+            self::STANDARD => 'Поле {{name}} не должно быть файлом',
         ],
     ];
 }

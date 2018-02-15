@@ -21,10 +21,10 @@ class BsnException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a BSN',
+            self::STANDARD => 'Поле {{name}} должно быть BSN',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a BSN',
+            self::STANDARD => 'Поле {{name}} не должно быть BSN',
         ],
     ];
 }

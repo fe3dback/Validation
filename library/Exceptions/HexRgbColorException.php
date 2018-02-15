@@ -15,10 +15,10 @@ class HexRgbColorException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a hex RGB color',
+            self::STANDARD => 'Поле {{name}} должно быть шестнадцатиричным RGB цветом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a hex RGB color',
+            self::STANDARD => 'Поле {{name}} не должно быть шестнадцатиричным RGB цветом',
         ],
     ];
 }

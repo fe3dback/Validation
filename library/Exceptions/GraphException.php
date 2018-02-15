@@ -15,12 +15,12 @@ class GraphException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only graphical characters',
-            self::EXTRA => '{{name}} must contain only graphical characters and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только графические символы',
+            self::EXTRA => 'Поле {{name}} должно содержать только графические символы и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain graphical characters',
-            self::EXTRA => '{{name}} must not contain graphical characters or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать графические символы',
+            self::EXTRA => 'Поле {{name}} не должно содержать графические символы и "{{additionalChars}}"',
         ],
     ];
 }

@@ -15,12 +15,12 @@ class AtLeastException extends GroupedValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::NONE => 'At least {{howMany}} of the {{failed}} required rules must pass for {{name}}',
-            self::SOME => 'At least {{howMany}} of the {{failed}} required rules must pass for {{name}}, only {{passed}} passed.',
+            self::NONE => 'Как минимум {{howMany}} из {{failed}} необходимых правил должны выполняться для поля {{name}}',
+            self::SOME => 'Как минимум {{howMany}} из {{failed}} необходимых правил должны выполняться для поля {{name}}, только {{passed}} выполнены.',
         ],
         self::MODE_NEGATIVE => [
-            self::NONE => 'At least {{howMany}} of the {{failed}} required rules must not pass for {{name}}',
-            self::SOME => 'At least {{howMany}} of the {{failed}} required rules must not pass for {{name}}, only {{passed}} passed.',
+            self::NONE => 'Как минимум {{howMany}} из {{failed}} необходимых правил не должны выполняться для поля {{name}}',
+            self::SOME => 'Как минимум {{howMany}} из {{failed}} необходимых правил не должны выполняться для поля {{name}}, только {{passed}} выполнены.',
         ],
     ];
 }

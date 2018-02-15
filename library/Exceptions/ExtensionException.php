@@ -23,10 +23,10 @@ class ExtensionException extends ValidationException
      */
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must have {{extension}} extension',
+            self::STANDARD => 'Поле {{name}} должно иметь {{extension}} расширение',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not have {{extension}} extension',
+            self::STANDARD => 'Поле {{name}} не должно иметь {{extension}} расширение',
         ],
     ];
 }

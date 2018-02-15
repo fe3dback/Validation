@@ -17,12 +17,12 @@ class AlphaException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only letters (a-z)',
-            self::EXTRA => '{{name}} must contain only letters (a-z) and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только буквы (a-z)',
+            self::EXTRA => 'Поле {{name}} должно содержать только буквы (a-z) и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain letters (a-z)',
-            self::EXTRA => '{{name}} must not contain letters (a-z) or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать буквы (a-z)',
+            self::EXTRA => 'Поле {{name}} не должно содержать буквы (a-z) и "{{additionalChars}}"',
         ],
     ];
 

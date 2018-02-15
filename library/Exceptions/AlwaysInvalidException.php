@@ -17,12 +17,12 @@ class AlwaysInvalidException extends ValidationException
 
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} is always invalid',
-            self::SIMPLE => '{{name}} is not valid',
+            self::STANDARD => 'Поле {{name}} всегда невалидное',
+            self::SIMPLE => 'Поле {{name}} невалидное',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} is always valid',
-            self::SIMPLE => '{{name}} is valid',
+            self::STANDARD => 'Поле {{name}} всегда валидное',
+            self::SIMPLE => 'Поле {{name}} валидное',
         ],
     ];
 }
