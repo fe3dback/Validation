@@ -180,7 +180,7 @@ class PostalCode extends Regex
     {
         $countryCodeRule = $countryCodeRule ?: new CountryCode();
         if (!$countryCodeRule->validate($countryCode)) {
-            throw new ComponentException(sprintf('Cannot validate postal code from "%s" country', $countryCode));
+            throw new ComponentException(sprintf('Невозможно валидировать почтовый индекс страны "%s"', $countryCode));
         }
 
         $regex = self::DEFAULT_PATTERN;

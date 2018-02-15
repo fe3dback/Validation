@@ -15,12 +15,12 @@ class SpaceException extends AlphaException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must contain only space characters',
-            self::EXTRA => '{{name}} must contain only space characters and "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} должно содержать только пробельные символы',
+            self::EXTRA => 'Поле {{name}} должно содержать только пробельные символы и "{{additionalChars}}"',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not contain space characters',
-            self::EXTRA => '{{name}} must not contain space characters or "{{additionalChars}}"',
+            self::STANDARD => 'Поле {{name}} не должно содержать пробельные символы',
+            self::EXTRA => 'Поле {{name}} не должно содержать пробельные символы и "{{additionalChars}}"',
         ],
     ];
 }

@@ -22,7 +22,7 @@ class Zend extends AbstractRule
     public function __construct($validator, $params = [])
     {
         if (is_object($validator)) {
-            return $this->zendValidator = $validator;
+            $this->zendValidator = $validator;
         }
 
         if (!is_string($validator)) {

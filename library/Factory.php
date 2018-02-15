@@ -55,12 +55,12 @@ class Factory
 
             $reflection = new ReflectionClass($className);
             if (!$reflection->isSubclassOf('Respect\\Validation\\Validatable')) {
-                throw new ComponentException(sprintf('"%s" is not a valid respect rule', $className));
+                throw new ComponentException(sprintf('"%s" не является валидным правилом', $className));
             }
 
             return $reflection->newInstanceArgs($arguments);
         }
 
-        throw new ComponentException(sprintf('"%s" is not a valid rule name', $ruleName));
+        throw new ComponentException(sprintf('"%s" не является валидным именем правила', $ruleName));
     }
 }

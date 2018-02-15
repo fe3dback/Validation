@@ -22,10 +22,10 @@ class KzSubdivisionCodeException extends SubdivisionCodeException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a subdivision code of Kazakhstan',
+            self::STANDARD => 'Поле {{name}} должно быть кодом подразделения Казахстана',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a subdivision code of Kazakhstan',
+            self::STANDARD => 'Поле {{name}} не должно быть кодом подразделения Казахстана',
         ],
     ];
 }

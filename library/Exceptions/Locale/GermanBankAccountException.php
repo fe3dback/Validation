@@ -17,10 +17,10 @@ class GermanBankAccountException extends BankAccountException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a german bank account',
+            self::STANDARD => 'Поле {{name}} должно быть немецким банковским счётом',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a german bank account',
+            self::STANDARD => 'Поле {{name}} не должно быть немецким банковским счётом',
         ],
     ];
 }

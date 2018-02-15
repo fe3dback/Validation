@@ -22,11 +22,11 @@ class Age extends AllOf
     public function __construct($minAge = null, $maxAge = null)
     {
         if (null === $minAge && null === $maxAge) {
-            throw new ComponentException('An age interval must be provided');
+            throw new ComponentException('Возрастной интервал должен быть указан');
         }
 
         if (null !== $minAge && null !== $maxAge && $maxAge <= $minAge) {
-            throw new ComponentException(sprintf('%d cannot be greater than or equals to %d', $minAge, $maxAge));
+            throw new ComponentException(sprintf('%d не может быть больше либо равно %d', $minAge, $maxAge));
         }
 
         $this->setMinAge($minAge);

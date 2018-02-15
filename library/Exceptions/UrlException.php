@@ -15,10 +15,10 @@ class UrlException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be an URL',
+            self::STANDARD => 'Поле {{name}} должно быть URL',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be an URL',
+            self::STANDARD => 'Поле {{name}} не должно быть URL',
         ],
     ];
 }

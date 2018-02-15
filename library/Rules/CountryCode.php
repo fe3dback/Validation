@@ -290,7 +290,7 @@ class CountryCode extends AbstractRule
     {
         $index = array_search($set, self::getAvailableSets(), true);
         if (false === $index) {
-            throw new ComponentException(sprintf('"%s" is not a valid country set for ISO 3166-1', $set));
+            throw new ComponentException(sprintf('"%s" является некорректным перечнем для ISO 3166-1', $set));
         }
 
         $this->set = $set;

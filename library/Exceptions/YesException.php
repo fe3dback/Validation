@@ -15,10 +15,10 @@ class YesException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} is not considered as "Yes"',
+            self::STANDARD => 'Поле {{name}} не считается как "Да" ("Yes")',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} is considered as "Yes"',
+            self::STANDARD => 'Поле {{name}} считается как "Да" ("Yes")',
         ],
     ];
 }

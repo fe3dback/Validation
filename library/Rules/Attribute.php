@@ -20,7 +20,7 @@ class Attribute extends AbstractRelated
     public function __construct($reference, Validatable $validator = null, $mandatory = true)
     {
         if (!is_string($reference) || empty($reference)) {
-            throw new ComponentException('Invalid attribute/property name');
+            throw new ComponentException('Некорректное имя свойства');
         }
 
         parent::__construct($reference, $validator, $mandatory);

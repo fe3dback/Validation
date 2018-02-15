@@ -15,10 +15,10 @@ class UppercaseException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be uppercase',
+            self::STANDARD => 'Поле {{name}} должно содержать только прописные буквы',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be uppercase',
+            self::STANDARD => 'Поле {{name}} не должно содержать прописные буквы',
         ],
     ];
 }

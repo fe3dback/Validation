@@ -22,7 +22,7 @@ class IdentityCard extends AbstractWrapper
         $shortName = ucfirst(strtolower($countryCode)).'IdentityCard';
         $className = __NAMESPACE__.'\\Locale\\'.$shortName;
         if (!class_exists($className)) {
-            throw new ComponentException(sprintf('There is no support for identity cards from "%s"', $countryCode));
+            throw new ComponentException(sprintf('Нет поддержки для удостоверения личности "%s"', $countryCode));
         }
 
         $this->countryCode = $countryCode;

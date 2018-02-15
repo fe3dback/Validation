@@ -24,7 +24,7 @@ class Factor extends AbstractRule
     public function __construct($dividend)
     {
         if (!is_numeric($dividend) || (int) $dividend != $dividend) {
-            $message = 'Dividend %s must be an integer';
+            $message = 'Делитель %s должен быть целым числом';
             throw new ComponentException(sprintf($message, ValidationException::stringify($dividend)));
         }
 

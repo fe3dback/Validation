@@ -19,11 +19,11 @@ class FilterVar extends Callback
     {
         $arguments = func_get_args();
         if (!isset($arguments[0])) {
-            throw new ComponentException('Cannot validate without filter flag');
+            throw new ComponentException('Невозможно валидировать без фильтров');
         }
 
         if (!$this->isValidFilter($arguments[0])) {
-            throw new ComponentException('Cannot accept the given filter');
+            throw new ComponentException('Нельзя принять такой фильтр');
         }
 
         $this->callback = 'filter_var';

@@ -15,10 +15,10 @@ class StartsWithException extends ValidationException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must start with ({{startValue}})',
+            self::STANDARD => 'Поле {{name}} должно начинаться с ({{startValue}})',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not start with ({{startValue}})',
+            self::STANDARD => 'Поле {{name}} не должно начинаться с ({{startValue}})',
         ],
     ];
 }

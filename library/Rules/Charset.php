@@ -27,7 +27,7 @@ class Charset extends AbstractRule
 
         if (!$charset) {
             throw new ComponentException(
-                'Invalid charset'
+                'Некорректная кодировка'
             );
         }
         $this->charset = $charset;

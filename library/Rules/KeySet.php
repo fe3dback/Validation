@@ -31,7 +31,7 @@ class KeySet extends AllOf
     {
         $rules = $rule->getRules();
         if (count($rules) != 1) {
-            throw new ComponentException('AllOf rule must have only one Key rule');
+            throw new ComponentException('AllOf правило должно иметь только одно Key правило');
         }
 
         return current($rules);
@@ -47,7 +47,7 @@ class KeySet extends AllOf
         }
 
         if (!$rule instanceof Key) {
-            throw new ComponentException('KeySet rule accepts only Key rules');
+            throw new ComponentException('KeySet правило принимает только Key правила');
         }
 
         $this->appendRule($rule);

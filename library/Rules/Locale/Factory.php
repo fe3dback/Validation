@@ -29,7 +29,7 @@ class Factory
             default:
                 throw new ComponentException(
                     sprintf(
-                        'Cannot provide BIC validation for country "%s"',
+                        'Невозможно провести BIC-валидацию для страны "%s"',
                         $countryCode
                     )
                 );
@@ -49,7 +49,7 @@ class Factory
             default:
                 throw new ComponentException(
                     sprintf(
-                        'Cannot provide bank validation for country "%s"',
+                        'Невозможно провести валидацию банка для страны "%s"',
                         $countryCode
                     )
                 );
@@ -69,7 +69,7 @@ class Factory
             default:
                 throw new ComponentException(
                     sprintf(
-                        'Cannot provide bank account validation for country "%s" and bank "%s"',
+                        'Невозможно провести валидацию банковского счёта для страны "%s" и банка "%s"',
                         $countryCode,
                         $bank
                     )

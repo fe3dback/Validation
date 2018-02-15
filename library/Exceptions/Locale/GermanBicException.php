@@ -17,10 +17,10 @@ class GermanBicException extends BicException
 {
     public static $defaultTemplates = [
         self::MODE_DEFAULT => [
-            self::STANDARD => '{{name}} must be a german BIC',
+            self::STANDARD => 'Поле {{name}} должно быть немецким BIC',
         ],
         self::MODE_NEGATIVE => [
-            self::STANDARD => '{{name}} must not be a german BIC',
+            self::STANDARD => 'Поле {{name}} не должно быть немецким BIC',
         ],
     ];
 }
